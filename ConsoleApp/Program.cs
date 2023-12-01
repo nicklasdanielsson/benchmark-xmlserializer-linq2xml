@@ -40,42 +40,46 @@ public class Program
 
     static void Main(string[] args)
     {
+        // Just a little bit of warmup....
+        TestFastestWayToCreateInstanceFromXmlString(10);
         PrintResultTableHeader();
         int numberOfCreations = 5000;
         var watch = Stopwatch.StartNew();
-        var results = TestFastestWayToReplaceOccurrencesInAString(numberOfCreations);
+        
         Console.WriteLine();
-        PrintResultTable2(results);
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(1));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(10));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
         numberOfCreations += 5000;
-        PrintResultTable2(TestFastestWayToReplaceOccurrencesInAString(numberOfCreations));
+        PrintResultTable2(TestFastestWayToCreateInstanceFromXmlString(numberOfCreations));
 
         watch.Stop();
         Console.WriteLine();
@@ -88,7 +92,7 @@ public class Program
         Console.ReadLine();
     }
 
-    static List<TestResult> TestFastestWayToReplaceOccurrencesInAString(int numberOfCreations)
+    static List<TestResult> TestFastestWayToCreateInstanceFromXmlString(int numberOfCreations)
     {
         var resultList = new List<TestResult>();
         const string tagName = "GetTicketDataResult";
@@ -153,7 +157,7 @@ public class Program
         resultList.Add(new TestResult
         {
             ParseToType = nameof(GemiGetTicketDataResult),
-            TypeOfCreation = "Linq2Sql",
+            TypeOfCreation = "Linq2Xml",
             ElapsedMilliseconds = watch.ElapsedMilliseconds,
             ElapsedTicks = watch.ElapsedTicks,
             ItemsCreated = itemsCreated
